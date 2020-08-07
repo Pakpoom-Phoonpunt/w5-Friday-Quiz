@@ -11,14 +11,18 @@ class Ball {
     ellipse(position_x, position_y, size, size);
   }
 }
-
-Ball ball1;
+int amount = 600;
+Ball[] ball = new Ball[amount];
 void setup () {
-  ball1 = new Ball(200.00, 200.00, 200);
+  //ball[1] = new Ball(200.00, 200.00, 200);
   size(1000, 1000);
-  
+  for(int i = 0 ; i < amount ; i ++){
+    ball[i] = new Ball(float(int(random(0,1000))), float(int(random(0,1000))), 200);
+  }
 }
 
 void draw () {
-  ball1.draw();
+  for(int i = 0 ; i < amount ; i ++){
+    ball[i].draw();
+  }
 }
